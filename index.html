@@ -8,11 +8,31 @@
 
 <body>
 	<h1>Hunter Gallant</h1>
+	
 	<p>
 	Welcome to my website! Here is a selection of my personal projects, and if you feel so inclined, you can checkout the code for these on <a href="https://github.com/theairdemon" target="_blank">my Github</a>.
 	</p>
-	<p>
-	</p>
+	
+	<div class="flex-grid">
+	  <div class="col-l">
+		<h3 class="project-title"><a href="https://github.com/theairdemon/musicGenerator" target="_blank">Music Generator</a></h3>
+		<p>
+		Using music theory and random number generators, I built a python program that creates MIDI files (digital music instructions). A musician can simply click-and-drag the files into a DAW (digital audio workstation), and they'd immediately have a full song, comprised of chords, melodies, and harmonies.
+		</p>
+	  </div>
+	  <div class="col-c">
+		<h3 class="project-title"><a href="https://github.com/theairdemon/CellularAutomata" target="_blank">Cellular Automata</a></h3>
+		<p>
+		As an experiment in artificial life, and to improve my C++ skills, I built a simulation of <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Conway's Game of Life</a>, using SFML to render the simple 2D graphics. Using those cells as a foundation, I then built what I call the "least-optimized Tetris game ever". Instead of blocks that fall from the top of the screen to the bottom, this version of Tetris implements a custom variation of Conway's Game of Life rules, and can take the user's input to modify the state of the game.
+		</p>
+	  </div>
+	  <div class="col-r">
+		<h3 class="project-title"><a href="https://github.com/theairdemon/themedPoemGenerator" target="_blank">Poem Generator</a></h3>
+		<p>
+		My first major undertaking, and one that I am still proud of; I built and published an Android app, <a href="https://play.google.com/store/apps/details?id=com.mycompany.poetry" target="_blank">PoemGen</a>. Similar to the Music Generator, this application uses common poetic nouns, verbs, and adjectives to randomly generate poetry on-demand. It can also generate haiku, using a more limited list of words (to account for syllables).
+		</p>
+	  </div>
+	</div>
 </body>
 
 </html>

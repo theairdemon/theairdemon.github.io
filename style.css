@@ -1,4 +1,63 @@
 body {
 	font-family: Arial, sans-serif;
-	padding: 10%;
+	padding: 5%;
+	background-color: black;
+	color: AliceBlue;
+}
+
+@media (max-width: 800px) {
+	.flex-grid {
+		display: block;
+	}
+	.col-l {
+		padding:5%;
+	}
+	.col-c {
+		padding: 5%;
+	}
+	.col-r {
+		padding: 5%;
+	}
+}
+
+.flex-grid {
+  display: flex;
+}
+.col-l {
+  flex: 1;
+  padding: 5%;
+  padding-left: 0;
+}
+.col-c {
+  flex: 1;
+  padding: 5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+.col-r {
+  flex: 1;
+  padding: 5%;
+  padding-right: 0;
+}
+
+
+.project-title {
+	text-decoration: underline;
+}
+
+
+a:link {
+  color: AliceBlue;
+}
+
+a:visited {
+  color: AliceBlue;
+}
+
+a:hover {
+  color: Aquamarine;
+}
+
+a:active {
+  color: Blue;
 }
