@@ -5,39 +5,28 @@ body {
 	color: AliceBlue;
 }
 
-@media (max-width: 800px) {
-	.flex-grid {
-		display: block;
-	}
-	.col-l {
-		padding:5%;
-	}
-	.col-c {
-		padding: 5%;
-	}
-	.col-r {
-		padding: 5%;
-	}
+.opening {
+	padding: 5%;
 }
 
 .flex-grid {
   display: flex;
+  flex-flow: wrap; 
 }
 .col-l {
   flex: 1;
   padding: 5%;
-  padding-left: 0;
+  min-width: 250px;
 }
 .col-c {
   flex: 1;
   padding: 5%;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
+  min-width: 250px;
 }
 .col-r {
   flex: 1;
   padding: 5%;
-  padding-right: 0;
+  min-width: 250px;
 }
 
 
