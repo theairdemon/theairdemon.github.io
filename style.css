@@ -44,6 +44,11 @@ body {
 	text-decoration: underline;
 }
 
+.clocks {
+	font-family: Arial, sans-serif;
+	font-size: 100px;
+}
+
 
 a:link {
   color: AliceBlue;
