@@ -1,5 +1,5 @@
 body {
-	font-family: Arial, sans-serif;
+	font-family: Courier, sans-serif;
 	padding: 5%;
 	background-color: black;
 	color: AliceBlue;
@@ -45,7 +45,7 @@ body {
 }
 
 .clocks {
-	font-family: Arial, sans-serif;
+	font-family: Courier, sans-serif;
 	font-size: 100px;
 }
 
