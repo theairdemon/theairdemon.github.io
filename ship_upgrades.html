@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ship Upgrades Calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="calculator">
+		<h2>Player Rolls</h2>
+		<label for="altum">Altum: </label>
+		<input type="number" id="altum" name="altum" min="1" />
+		<br>
+		<label for="gratmon">Gratmon: </label>
+		<input type="number" id="gratmon" name="gratmon" min="1" />
+		<br>
+		<label for="quinshil">Quinshil: </label>
+		<input type="number" id="quinshil" name="quinshil" min="1" />
+		<br>
+		<label for="deirdra">Deirdra: </label>
+		<input type="number" id="deirdra" name="deirdra" min="1" />
+		<br>
+		<label for="fuket">Fuket: </label>
+		<input type="number" id="fuket" name="fuket" min="1" />
+		<br>
+		<label for="narrar">Narrar: </label>
+		<input type="number" id="narrar" name="narrar" min="1" />
+		<br>
+		<label for="xorick">Xorick: </label>
+		<input type="number" id="xorick" name="xorick" min="1" />
+		<br>
+		<label for="yelen">Ye'len: </label>
+		<input type="number" id="yelen" name="yelen" min="1" />
+		<br><br>
+		<h2>Situational Info</h2>
+		<label for="numPlayers">Number of Players: </label>
+		<input type="number" id="numPlayers" name="numPlayers" min="1" />
+		<br>
+		<label for="numArtificers">Number of Artificers: </label>
+		<input type="number" id="numArtificers" name="numArtificers" min="1" />
+		<br>
+		<label for="upgradeTime">Initial Upgrade Time (days): </label>
+		<input type="number" id="upgradeTime" name="upgradeTime" min="1" />
+		<br>
+		<label for="upgradeCost">Initial Upgrade Cost (gold): </label>
+		<input type="number" id="upgradeCost" name="upgradeCost" min="1" />
+		<br><br>
+		<h2 id="newUpgradeTime"></h2>
+		<h2 id="newUpgradeCost"></h2>	
+	</div>
+	<script>
+	// Update the count every 1 second
+	var x = setInterval(function() {
+		// Player Skill Checks
+		var altum = Number(document.getElementById("altum").value);
+		var gratmon = Number(document.getElementById("gratmon").value);
+		var quinshil = Number(document.getElementById("quinshil").value);
+		var deirdra = Number(document.getElementById("deirdra").value);
+		var fuket = Number(document.getElementById("fuket").value);
+		var narrar = Number(document.getElementById("narrar").value);
+		var xorick = Number(document.getElementById("xorick").value);
+		var yelen = Number(document.getElementById("yelen").value);
+		var playerSkills = [altum, gratmon, quinshil, deirdra, fuket, narrar, xorick, yelen]
+		
+		// Situational Info
+		var numPlayers = Number(document.getElementById("numPlayers").value);
+		var numArtificers = Number(document.getElementById("numArtificers").value);
+		var upgradeTime = Number(document.getElementById("upgradeTime").value);
+		var upgradeCost = Number(document.getElementById("upgradeCost").value);
+		
+		// Results
+		var newUpgradeTime = upgradeTime;
+		var newUpgradeCost = Math.max((upgradeCost - ((numPlayers - numArtificers) * 500)) - (numArtificers * 1000), 500);
+		
+		// Function for newUpgradeTime
+		for (var i = 0; i < playerSkills.length; i++) {
+			var x = playerSkills[i];
+			if (x < 10) {
+				newUpgradeTime += upgradeTime * ((Math.pow(Math.abs(x - 10), 1.6) / 5 + 2) / 100);
+			} else {
+				newUpgradeTime -= upgradeTime * ((Math.pow((x - 10), 1.6) / 5 + 2) / 100);
+			}
+		}
+		
+		// Minimum time of 8 hours
+		if (newUpgradeTime < 0.25) {
+			newUpgradeTime = 0.25;
+		}
+		// Convert newUpgradeTime to days and hours
+		var days = Math.floor(newUpgradeTime);
+		var hours = Math.floor((newUpgradeTime - days) * 24);
+ 		
+		// Display the result in the element
+		document.getElementById("newUpgradeTime").innerHTML = "New Upgrade Time: " + days + " days, " + hours + " hours";
+		document.getElementById("newUpgradeCost").innerHTML = "New Upgrade Cost: " + newUpgradeCost + " gold";	
+	}, 500);
+	</script>
+</body>
