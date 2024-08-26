@@ -31,6 +31,17 @@ body {
   justify-content: space-around;
 }
 
+.full-col {
+  flex: 1 0 100%;
+  padding: 2.5%;
+  min-width: 750px; /* minimum width of three columns */
+  max-width: 1500px; /* maximum width of three columns */
+  margin: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  background-color: #F6E4CD;
+}
+
 .col-l, .col-c, .col-r {
   flex: 1 0 20%;
 	padding: 2.5%;
@@ -102,4 +113,37 @@ a:active {
 
 .player-rolls, .situational-info {
 	width: 45%;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 5%;
+	background-color: #F6E4CD;
+	position: relative;
+}
+
+header h1 {
+	font-size: 2em;
+	color: #101622;
+}
+
+nav ul {
+	display: flex;
+	list-style-type: none;
+}
+
+nav ul li {
+	margin-left: 20px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #101622;
+	font-size: 1.2em;
+}
+
+nav ul li a:hover {
+	color: #A22B25;
 }
