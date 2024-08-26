@@ -1,67 +1,105 @@
 body {
-	font-family: Courier, sans-serif;
+	font-family: Arial, sans-serif;
 	padding: 5%;
-	background-color: black;
-	color: AliceBlue;
+	background-color: #F6E4CD;
+	color: #101622;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 20px;
 }
 
 .opening {
+	grid-column: span 12;
 	padding: 5%;
+	text-align: center;
 }
 
 .headers {
+	grid-column: span 12;
 	padding-left: 5%;
 	padding-right: 5%;
+	text-align: center;
 }
-
 
 .flex-grid {
   display: flex;
   flex-flow: wrap; 
   padding-bottom: 1%;
-}
-.col-l {
-  flex: 1;
-	padding-left: 5%;
-	padding-right: 5%;
-  min-width: 250px;
-}
-.col-c {
-  flex: 1;
-	padding-left: 5%;
-	padding-right: 5%;
-  min-width: 250px;
-}
-.col-r {
-  flex: 1;
-	padding-left: 5%;
-	padding-right: 5%;
-  min-width: 250px;
+  justify-content: space-around;
 }
 
+.col-l, .col-c, .col-r {
+  flex: 1 0 20%;
+	padding: 2.5%;
+  min-width: 250px;
+  max-width: 500px;
+  margin: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  background-color: #F6E4CD;
+}
 
 .project-title {
 	text-decoration: underline;
+	color: #A22B25;
 }
 
 .clocks {
-	font-family: Courier, sans-serif;
+	font-family: Arial, sans-serif;
 	font-size: 100px;
+	color: #58787C;
 }
 
-
 a:link {
-  color: AliceBlue;
+  color: #101622;
 }
 
 a:visited {
-  color: AliceBlue;
+  color: #A22B25;
 }
 
 a:hover {
-  color: Aquamarine;
+  color: #58787C;
 }
 
 a:active {
-  color: Blue;
+  color: #FC3F29;
+}
+
+.calculator {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.calculator h2 {
+	text-align: center;
+	color: #A22B25;
+	width: 100%;
+}
+
+.calculator label {
+	font-size: 1.2em;
+	color: #58787C;
+}
+
+.calculator input {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	border: 1px solid #101622;
+}
+
+#newUpgradeTime, #newUpgradeCost {
+	text-align: center;
+	font-size: 1.5em;
+	color: #A22B25;
+	width: 100%;
+}
+
+.player-rolls, .situational-info {
+	width: 45%;
 }
