@@ -48,7 +48,7 @@
 	  var hoursFractions = Math.ceil((distance / (60 * 60)))/1000;
 	  
 	  // Display the result in the element
-	  document.getElementById("clock2").innerHTML = hoursFractions + " hours";
+	  document.getElementById("clock2").innerHTML = hoursFractions.toFixed(2) + " hours";
 
 	  // If the count down is finished, write some text
 	  if (distance < 0) {
