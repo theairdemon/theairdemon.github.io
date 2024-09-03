@@ -28,7 +28,7 @@ body {
 .full-col {
   flex: 1 0 100%;
   padding: 2.5%;
-  padding-bottom: 0%;
+  padding-top: 0%;
   min-width: 450px; /* minimum width of three columns */
   max-width: 1500px; /* maximum width of three columns */
   margin: 10px;
