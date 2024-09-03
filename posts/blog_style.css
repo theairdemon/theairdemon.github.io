@@ -32,7 +32,7 @@ body {
   min-width: 450px; /* minimum width of three columns */
   max-width: 1500px; /* maximum width of three columns */
   margin: 10px;
-  /*box-shadow: 0px 0px 10px rgba(0,0,0,0.1);*/
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.1);
   border-radius: 5px;
   background-color: #F6E4CD;
 }
