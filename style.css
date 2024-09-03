@@ -152,6 +152,19 @@ nav ul li a:hover {
 	color: #A22B25;
 }
 
+.custom-list {
+	list-style-type: none; 
+	padding: 0;
+}
+
+.custom-list li {
+	padding: 10px 0;
+}
+
+.custom-list li:last-child {
+	border-bottom: none;
+}
+
 @media all and (max-width: 1024px) {
 	body {
 		font-size: 2em;
