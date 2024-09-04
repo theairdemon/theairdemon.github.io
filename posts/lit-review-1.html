@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ignore the Noise</title>
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="blog_style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Literature Review: Ignore the Noise</h1>
+		<nav>
+		<ul>	
+		<li><a href="../index.html">Home</a></li>
+		<li><a href="../about.html">About</a></li>
+		<li><a href="../blog.html">Blog</a></li>
+		</ul>
+		</nav>
+	</header>
+	<div class="opening">	
+		<p>
+		Published on September 4th, 2024 
+		</p>
+	</div>
+	
+	
+	<div class="headers">
+		<h2>An Intro to This Series</h2>
+	</div>	
+	
+	<div class="full-col">
+		<p>
+		As the first literature review I've published on my personal blog, I'll begin with a small overview of this series. 
+		For years now, I've been browsing the daily submissions to <a href="https://arxiv.org/" target="_blank">Arxiv</a>, a free pre-print publication service for STEM papers. 
+		It was on Arxiv that I first learned of <a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf" target="_blank">GPT-2</a>, the predecessor to the world-reknown ChatGPT. 
+		I personally believe that scientific research should be free and available to the public, and moreover, it should be accessible and easy to understand for a non-technical audience. 
+		While these papers put forth intriguing and engaging experiments, they don't actively work to portray that knowledge in an intelligible manner - completely understandable, since they're being published by and for a highly-technical audience. 
+		When papers are brought before the public eye, it seems (in my own experience) to be through one of two primary methods:
+		<ol>
+			<li>
+			<b>Major News Source:</b> the New York Times tech section, Fox News cable show, or even NASA's mobile app.
+			These, and other major news sources, come with their own paywalls, biases, and agendas. 
+			Many of them (with the exception of publicly funded sources) also have advertisements, distracting from the information. 
+			</li>
+			<li>
+			<b>Online Content Farms:</b> these are the websites with ads cluttering the entire screen, making it nearly impossible to read the content. 
+			If you manage to read what the article says, it often does little more than quote (or misquote) the abstract of a given paper. 
+			</li>
+		</ol>
+		</p>
+		<p>
+		My goal here is to inform and interpret these technical papers so anyone can understand what they're trying to say. 
+		I don't want to restrict my reviews, so I won't lay down a strict format at the moment. 
+		Nonetheless, I'll note here that my reviews will certainly have some biases in them, and I embrace those beliefs. 
+		As an example: I truly believe that artificial intelligence is a powerful tool that can do a lot of good in the world. 
+		However, I am <i>incredibly</i> wary of large corporations and greedy start-ups that seek to capitalize on a popular buzzword. 
+		Every AI project should have a strict code of ethics, and the consequences of AI research <i>need</i> to be deliberately thought-out. 
+		As a result, my AI literature reviews will have some amount of bias, and I'll do my best to convey that. </p>
+		<p>
+		And speaking of AI: on my honor, these blog posts will never be written, in whole or in part, by a generative AI tool. 
+		Every word I have typed here came from my own fingers, typing away in NeoVim on my personal computer.
+		All papers will be linked to their original Arxiv postings and properly sourced at the bottom of the post. 
+		I encourage people to read the paper and work through the difficult terms as they arise.
+		</p>	
+	</div>
+	
+	<div class="headers">
+		<h2>The Paper</h2>
+	</div>
+	
+	<div class="full-col">
+		<p>
+		For this introductory piece, I'll be starting with "<a href="https://arxiv.org/abs/2409.00306" target="_blank">Evolutionary Algorithms Are Significantly More Robust to Noise When They Ignore It</a>". 
+		In this paper, the authors, Anitpov and Doerr, argue that a particular set of algorithms, thought to be "robust to noise", could actually function better in a searchspace that has been cleaned of noise. 
+		These algorithms are of particular note to those in the AI business: <i>randomized search heuristics</i> (RHSs). 
+		The authors then go on to describe some evolution algorithms, using a particular benchmark (LeadingOnes), and re-evaluating with noise rates over <b><i>O(n<sup>-2</sup></i>log<i> n)</i></b>, and pretty soon we're lost in the sauce of technical terms.
+		</p>
+		<p>
+		This is not a criticism of the authors; their work is solid and well-written. 
+		It goes back to my point from above, that these papers are specifically written for a technical audience. 
+		Let's start again, from the beginning, reducing and explaining the technical terms.
+		</p>
+	</div>
+
+	<div class ="headers">
+		<h2>Randomized Search Heuristics</h2>
+	</div>
+
+	<div class="full-col"> 
+		<p>
+		In this paper, the authors are analyzing <i>randomized search heuristics</i>. 
+		This the broad term that refers to any number of "artificial intelligence" algorithms. 
+		Over the decades, "AI" has referred to an array of vastly different algorithms. 
+		Deep Blue, the computer that beat Garry Kasparov at chess in 1996, was called "AI". 
+		Enemies in video games are referred to as "AI". 
+		And of course, ChatGPT is possibly the modern pinnacle of "AI".
+		All of these are completely different systems, and only the most modern AI system perform any sort of internal learning. 
+		That's why I much prefer the term <i>machine learning</i>, referring to algorithms that train on input data and learn what the corresponding output data should look like. 
+		</p>
+		<p>
+		Deep Blue, as impressive as it was, would never improve at chess the more it played. 
+		If you played 200 games of chess against Deep Blue, and you performed the exact same moves in every game, it would always play the exact same moves against you. 
+		The reason it could beat Kasparov was due to its ability to predict, based off the current state of the game, what moves Kasparov would play. 
+		Compare this to AlphaGo, Google's program that was trained on the Chinese game of Go. 
+		AlphaGo analyzed thousands and thousands of games of Go, learning the rules and building a repertoire of strategies. 
+		These strategies were weighted depending on when they won, how often they won, etc. 
+		The more games of Go analyzed by AlphaGo, the more it learned how the game worked, and the better at Go it became. 
+		Another program, AlphaZero, also made by Google to play Go, learned how to play without any input games at all. 
+		It played against itself, thousands, millions of games, learning from its own mistakes and correcting them in each successive game. 
+		These programs <i>improved over time</i>, and more importantly, they <i>learned from input data</i>.
+		</p>
+		<!--<p>
+		For RHSs, we are referring to <i>self-teaching AI</i>; put another way, AI that learns and grows over time.
+		AlphaZero and AlphaGo both used some type of RHS to learn how to play Go. 
+		ChatGPT and other large language models (LLMs) use some kind of RHS to learn what human writing looks like. 
+		These programs do that by taking in a huge amount of input/output pairs. 
+		For a LLM, the input/output pair is often a series of letters for the input, followed by another series of letters for the output. 
+		For instance: the input "[T,O,W,H,O,M]" might have an output of "[I,T,M,A,Y,C,O,N,C,E,R,N]". 
+		The probably that someone is writing the entire phrase "To whom it may concern" is much higher than if someone were writing the phrase "To whom19082r87howidf". 
+		</p>
+		<p>
+		The problem with purely analyzing the probablity of these sequences is that simple probablities are not enough to create "novel" works. 
+		There's a simply form of this that can be pretty quickly coded by anyone with programming experience, called a <a href="https://www.javatpoint.com/hidden-markov-model-in-machine-learning" target="_blank">Hidden Markov Model</a>, where you create a matrix of likely continuations on a given input. 
+		In order to create more complex, non-linear and multi-dimensional probablities, we move to other programs
+		</p>-->
+		<p>
+		For RHSs, we are still at the lower-end of "complex" AI, not quite on the level of ChatGPT or AlphaZero. 
+		But the basic idea of a learning AI is still here. 
+		An RHS can also (broadly) be referred to as an <i>evolutionary</i> or <i>genetic</i> algorithm. 
+		</p>
+		<p>
+		Let's say we want to create an optimized "walking robot". 
+		We program in physics and ground collisions, and we give our program a "genome" with several parameters:
+		<ul>
+		<li>Number of legs</li>
+		<li>Order of leg movements</li>
+		<li>Individual leg movement speed</li>
+		<li>Number of arms</li>
+		<li>Speed of arm movement</li>
+		</ul>
+		In practice, we may have more parameters, or we may choose to abstract-away the parameters into a string of numbers, but for this example, this is our starting gene for this algorithm. 
+		Our algorithm starts, and our simulated creature immediately sprawls out on the ground. 
+		It cannot walk one step. 
+		But this is not a failure; this is the first link in the chain of evolution. 
+		For our 2nd iteration, we randomly change something in our genome. 
+		Perhaps there were not enough legs, or they moved too quickly. 
+		We don't know what the problem is; we only know that <i>something</i> needs to change. 
+		We run it with this change, and the creature tears itself in half. 
+		Keep changing, keep tweaking random parameters, until eventually, it can stand, and it takes one step. 
+		Now, based on what we've changed up until now, we can make <i>weighted random choices</i>. 
+		Instead of an even split between changing everything, maybe we give more weight to increasing the leg movement speed. 
+		After hundreds or thousands of iterations, we could very well end up with a proper walking creature, running across the simulated ground. 
+		</p>
+		<p>
+		The amount of human effort to perform these iterations would be gargantuan. 
+		And, moreover, humans bring our own biases into these sorts of algorithms. 
+		Something we may think is optimal, such as two or four legs, might not be optimal for our program. 
+		Thus, we make our evolutionary algorithms that can self-evolve and grow over time, changing their own "genetic code" based on environmental factors. 
+		This form of AI will never produce the complex works of ChatGPT or AlphaZero, but they have their own place in many fields of science. 
+		Obviously, biology and bioinformatics are a great application for these algorithms, simulating biological evolution in minutes. 
+		Engineering can also benefit from RHSs, particularly for optiumizaition problems. 
+		</p>
+		<p>
+		So, with all that said, what are the authors proving in this paper? 
+		The input space of these RHSs have to deal with a lot of noise. 
+		For our walking algorithm, we might add input such as random gusts of wind that knock down the creature, or we could introduce genetic mutations that randomly show up and throw off our values. 
+		A general consensus has been to attempt to "filter out" this noise. 
+		Perhaps we disregard the iteration where a gust of wind knocked down our creature. 
+		If optimizing an airplane wing design, maybe we ignore the random mutation that adds sharp, uneven spikes on top of the metal. 
+		Antipov and Doerr argue that, instead of ignoring or re-evaluating the noise in our data, we should instead let it go through the same process as all the rest of our data. 
+		They use a specific benchmark, LeadingOnes, to show that their evolutionary algorithms can tolerate up to a particular level of noisiness in their input data. 
+		</p>
+		<p>
+		For future evolutionary algorithm research, if we get rid of re-evaluations (or, at least, if we can reduce the amount), we not only save computational power, we also save a lot of time. 
+		Computers are fast at running these evolutionary algorithms, but for robust research, these algorithms need to be run dozens and dozens of times. 
+		Saving a minute or two on every run can add up to hours of time and energy saved, leading to better research with quicker turn-around times.
+		</p>
+		<p>
+		And that's the important takeaway from this paper: <b>we don't need to spend so much time getting rid of the noise</b>.
+	</div>
+	
+	<div class="headers">
+		<h2>Citations</h2>
+	</div>
+	
+	<div class="full-col">
+		<p>
+		<ul>
+		<li>@misc{antipov2024evolutionaryalgorithmssignificantlyrobust,
+		 <br>&emsp;title={Evolutionary Algorithms Are Significantly More Robust to Noise When They Ignore It}, 
+		 <br>&emsp;author={Denis Antipov and Benjamin Doerr},
+		 <br>&emsp;year={2024},
+		 <br>&emsp;eprint={2409.00306},
+		 <br>&emsp;archivePrefix={arXiv},
+		 <br>&emsp;primaryClass={cs.NE},
+		 <br>&emsp;url={https://arxiv.org/abs/2409.00306}}
+		</li>
+		<li>@book{10.5555/1996312,
+		<br>&emsp;author = {Auger, Anne and Auger, Anne and Doerr, Benjamin},
+		<br>&emsp;title = {Theory of Randomized Search Heuristics: Foundations and Recent Developments},
+		<br>&emsp;		year = {2011},
+		<br>&emsp;isbn = {9789814282666},
+		<br>&emsp;publisher = {World Scientific Publishing Co., Inc.}}
+		</li>
+		</ul>
+		</p>
+	</div>
+	
+</body>
+
+</html>
