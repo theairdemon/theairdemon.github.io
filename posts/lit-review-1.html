@@ -72,7 +72,7 @@
 	<div class="full-col">
 		<p>
 		For this introductory piece, I'll be starting with "<a href="https://arxiv.org/abs/2409.00306" target="_blank">Evolutionary Algorithms Are Significantly More Robust to Noise When They Ignore It</a>". 
-		In this paper, the authors, Anitpov and Doerr, argue that a particular set of algorithms, thought to be "robust to noise", could actually function better in a searchspace that has been cleaned of noise. 
+		In this paper, the authors, Anitpov and Doerr, argue that a particular set of algorithms, run on data with noise, don't require the same type of noise-cleaning that was previously assumed. 
 		These algorithms are of particular note to those in the AI business: <i>randomized search heuristics</i> (RHSs). 
 		The authors then go on to describe some evolution algorithms, using a particular benchmark (LeadingOnes), and re-evaluating with noise rates over <b><i>O(n<sup>-2</sup></i>log<i> n)</i></b>, and pretty soon we're lost in the sauce of technical terms.
 		</p>
@@ -148,7 +148,7 @@
 		We don't know what the problem is; we only know that <i>something</i> needs to change. 
 		We run it with this change, and the creature tears itself in half. 
 		Keep changing, keep tweaking random parameters, until eventually, it can stand, and it takes one step. 
-		Now, based on what we've changed up until now, we can make <i>weighted random choices</i>. 
+		Now, based on what we've changed up until now, we can make <i>weighted random choices</i>, where the weights are determined by the <i>fitness level</i> of each generation. 
 		Instead of an even split between changing everything, maybe we give more weight to increasing the leg movement speed. 
 		After hundreds or thousands of iterations, we could very well end up with a proper walking creature, running across the simulated ground. 
 		</p>
@@ -161,8 +161,15 @@
 		Obviously, biology and bioinformatics are a great application for these algorithms, simulating biological evolution in minutes. 
 		Engineering can also benefit from RHSs, particularly for optiumizaition problems. 
 		</p>
+	</div>
+	<div class="header">
+		<h2>In Short...</h2>
+	</div>
+	<div class="full-col">
 		<p>
-		So, with all that said, what are the authors proving in this paper? 
+		With all that said, what are the authors proving in this paper? 
+		</p>
+		<p>
 		The input space of these RHSs have to deal with a lot of noise. 
 		For our walking algorithm, we might add input such as random gusts of wind that knock down the creature, or we could introduce genetic mutations that randomly show up and throw off our values. 
 		A general consensus has been to attempt to "filter out" this noise. 
@@ -178,6 +185,21 @@
 		</p>
 		<p>
 		And that's the important takeaway from this paper: <b>we don't need to spend so much time getting rid of the noise</b>.
+	</div>
+
+	<div class="headers">
+		<h2>Philosophy Ex Machina</h2>
+	</div>
+
+	<div class="full-col">
+		<p>
+		I think this is a good philosophy that software engineers can take to heart.  
+		<b>Ignore the noise. </b>
+		Meetings, weekly syncs, stand-ups, team lunches, company drama; these are all necessary parts of the corporate life (some of these being better than others of course). 
+		But they're not the important parts of a job. 
+		The most important thing is always improving one's own skills. 
+		Whether this is for the purpose of finding a new position or increasing productivity, we should always be improving.
+		</p>
 	</div>
 	
 	<div class="headers">
