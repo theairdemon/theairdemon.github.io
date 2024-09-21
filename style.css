@@ -164,6 +164,14 @@ nav ul li a:hover {
 	border-bottom: none;
 }
 
+select {
+	font-size: inherit;
+	border: none;
+	background-color: #C3C6AC;
+	padding: 5px;
+	border-radius: 5px;
+}
+
 @media all and (max-width: 1024px) {
 	body {
 		font-size: 2em;
