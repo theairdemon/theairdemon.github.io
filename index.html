@@ -11,6 +11,13 @@ Links (click): #C3C6AC
 <head>
 	<title>Home</title>
 	<link rel="stylesheet" href="style.css" charset="UTF-8">
+	<!--<script type="application/javascript">
+	function getIP(json) {
+		document.getElementById("ip").innerHTML = json.ip;
+	}
+	</script>
+	<script type="application/javascript" src="http://ipinfo.io/?format=jsonp&callback=getIP"></script>
+	-->
 </head>
 
 <body>
@@ -27,7 +34,7 @@ Links (click): #C3C6AC
 	</header>
 	<div class="opening">
 		<p>
-		Welcome to my website! Here is a selection of my personal projects, and if you feel so inclined, you can checkout the code for these on <a href="https://github.com/theairdemon" target="_blank">my Github</a>.
+		Welcome to my website! I see you're joining from <span id="ip">somewhere in the US</span>. Here is a selection of my personal projects, and if you feel so inclined, you can checkout the code for these on <a href="https://github.com/theairdemon" target="_blank">my Github</a>.
 		</p>
 	</div>
 	
@@ -76,8 +83,14 @@ Links (click): #C3C6AC
 		My first major undertaking, and one that I am still proud of; I built and published an Android app, <a href="https://play.google.com/store/apps/details?id=com.mycompany.poetry" target="_blank">PoemGen</a>. Similar to the Music Generator, this application uses common poetic nouns, verbs, and adjectives to randomly generate poetry on-demand. It can also generate haiku, using a more limited list of words (to account for syllables).
 		</p>
 	  </div>
-	</div>
-	
+	</div>	
+	<script type="application/javascript">
+	function getIP(json) {
+		document.getElementById("ip").innerHTML = json.city + ", " + json.region;
+	}
+	</script>
+	<script type="application/javascript" src="http://ipinfo.io/?format=jsonp&callback=getIP"></script>
+
 </body>
 
 </html>
