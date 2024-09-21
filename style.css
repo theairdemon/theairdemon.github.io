@@ -55,7 +55,7 @@ body {
 
 .project-title {
 	text-decoration: underline;
-	color: #A22B25;
+	color: #2F4858;
 }
 
 .clocks {
@@ -65,19 +65,19 @@ body {
 }
 
 a:link {
-  color: #101622;
+  color: #2F4858;
 }
 
 a:visited {
-  color: #A22B25;
+  color: #2F4858;
 }
 
 a:hover {
-  color: #58787C;
+  color: #92A895;
 }
 
 a:active {
-  color: #FC3F29;
+  color: #C3C6AC;
 }
 
 .calculator {
@@ -87,13 +87,13 @@ a:active {
 
 .calculator h2 {
 	text-align: center;
-	color: #A22B25;
+	color: #2F4858;
 	width: 100%;
 }
 
 .calculator label {
 	font-size: 1.2em;
-	color: #58787C;
+	color: #44686F;
 }
 
 .calculator input {
@@ -107,7 +107,7 @@ a:active {
 #newUpgradeTime, #newUpgradeCost {
 	text-align: center;
 	font-size: 1.5em;
-	color: #A22B25;
+	color: #2F4858;
 	width: 100%;
 }
 
@@ -136,7 +136,6 @@ nav ul {
 	list-style-type: none;
 }
 
-
 nav ul li {
 	margin-left: 10px;
 	margin-right: 10px;
@@ -149,7 +148,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-	color: #A22B25;
+	color: #92A895;
 }
 
 .custom-list {
