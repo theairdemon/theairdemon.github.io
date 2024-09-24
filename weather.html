@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<!--
+Color Palette:
+https://colorffy.com/dark-theme-generator
+Color primary: #009688
+Color dark: #101622
+-->
+<head>
+	<title>The Weather</title>
+	<link rel="stylesheet" href="weather_style.css" charset="UTF-8">
+	<link rel="icon" type="image/x-icon" href="imgs/icons8-weather-forecast-16.png">
+</head>
+
+<body>
+	<header>
+		<h1>The Weather</h1>	
+		<nav>
+		<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="blog.html">Blog</a></li>
+		<li><a href="projects.html">Projects</a></li>
+		</ul>
+		</nav>
+	</header>
+	<div class="opening">
+		<p>
+		Test location: <span id="ip">somewhere in the US</span>
+		</p>
+	</div>
+	
+	
+	<div class="headers">
+		<h2>Daily Forecast</h2>
+	</div>	
+	
+	<div class="flex-grid" id="daily">
+	</div>
+	
+	<script type="application/javascript">
+	// Get weather info
+	async function getWeather(json) {
+		// Coords; if null, set to DC as default
+		var loc = json.loc;
+		if (!loc) {
+			loc = '38.89511,-77.03637';
+		}
+
+		document.getElementById("ip").innerHTML = loc;
+		
+		// Await and parse initial NWS weather call (cache in the future for speed? Idk)
+		const initWeatherResponse = await fetch('https://api.weather.gov/points/' + loc);
+		const initWeatherJson = await initWeatherResponse.json();
+		
+		// Get daily forecast
+		const dailyResponse = await fetch(initWeatherJson.properties.forecast);
+		const dailyJson = await dailyResponse.json();
+		//document.getElementById("hour1").innerHTML = dailyJson.properties.periods['0'].shortForecast;	
+
+		// daily forecast loop
+		var dailyForecast = "";
+		for (let i = 0; i < 12; i++) {
+			dailyForecast += printDailyForecast(dailyJson.properties.periods[i.toString()], i.toString());
+		}
+		
+		document.getElementById("daily").innerHTML = dailyForecast;
+	}
+
+	// Daily html format
+	function printDailyForecast(period, num) {
+		return "<div class='col-l'>" +
+			"<h3 class='project-title'>" + period.name + "</h3>" +
+			"<p>" + period.temperature + "&deg;F</p>" + 
+			"<p>" + period.detailedForecast + "</p>" +
+			"</div>";
+	}
+	</script>
+	<script type="application/javascript" src="https://ipinfo.io/?format=jsonp&callback=getWeather"></script>
+
+</body>
+
+</html>
