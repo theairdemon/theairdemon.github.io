@@ -25,17 +25,21 @@ Color dark: #101622
 		</nav>
 	</header>
 	<div class="opening">
-		<p>
-		Test location: <span id="ip">somewhere in the US</span>
-		</p>
+		<h1>
+		Weather in <span id="ip">LOCATION UNKNOWN</span>
+		</h1>
 	</div>
 	
+	<div class='weather-gifs'>
+	</div>
 	
 	<div class="headers">
 		<h2>Daily Forecast</h2>
 	</div>	
 	
-	<div class="flex-grid" id="daily">
+	<div class="daily-table">
+	<div class="daily-scroll" id="daily">
+	</div>
 	</div>
 	
 	<script type="application/javascript">
@@ -47,7 +51,7 @@ Color dark: #101622
 			loc = '38.89511,-77.03637';
 		}
 
-		document.getElementById("ip").innerHTML = loc;
+		document.getElementById("ip").innerHTML = json.city + ', ' + json.region;
 		
 		// Await and parse initial NWS weather call (cache in the future for speed? Idk)
 		const initWeatherResponse = await fetch('https://api.weather.gov/points/' + loc);
@@ -60,8 +64,10 @@ Color dark: #101622
 
 		// daily forecast loop
 		var dailyForecast = "";
-		for (let i = 0; i < 12; i++) {
-			dailyForecast += printDailyForecast(dailyJson.properties.periods[i.toString()], i.toString());
+		for (let i = 0; i < 3; i++) {
+		for (let ii = 0; ii < 12; ii++) {
+			dailyForecast += printDailyForecast(dailyJson.properties.periods[ii.toString()], ii.toString());
+		}
 		}
 		
 		document.getElementById("daily").innerHTML = dailyForecast;
@@ -69,9 +75,9 @@ Color dark: #101622
 
 	// Daily html format
 	function printDailyForecast(period, num) {
-		return "<div class='col-l'>" +
-			"<h3 class='project-title'>" + period.name + "</h3>" +
-			"<p>" + period.temperature + "&deg;F</p>" + 
+		return "<div class='daily-forecast'>" +
+			"<h3 class='period-name'>" + period.name + ": " + 
+			period.temperature + "&deg;F</h3>" + 
 			"<p>" + period.detailedForecast + "</p>" +
 			"</div>";
 	}

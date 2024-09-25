@@ -1,6 +1,12 @@
+html {
+	overflow-y: hidden;
+	overflow-x: hidden;
+	filter: blur(0.1px);
+}
+
 body {
 	font-family: Arial, sans-serif;
-	background-color: #88aaFF;
+	background-color: #87ceeb;
 	color: #000000;
 }
 
@@ -22,35 +28,44 @@ body {
 	text-align: center;
 }
 
-.flex-grid {
-  display: flex;
-  flex-flow: wrap; 
-  padding-bottom: 1%;
-  justify-content: space-around;
+.weather-gifs {
+	min-height: 1000px;
 }
 
-.full-col {
-  flex: 1 0 100%;
-  padding: 2.5%;
-  min-width: 450px; /* minimum width of three columns */
-  max-width: 1000px; /* maximum width of three columns */
+@keyframes scrolling {
+	from {margin-left: -3200px;}
+	to   {margin-left: -7880px;}
+}
+
+.daily-table {
+	display: table;
+	overflow-x: auto;
+	position: sticky;
+	bottom: 0;
+	margin-left: -3200px;
+  	animation-name: scrolling;
+  	animation-duration: 90s;
+  	animation-iteration-count: 200;
+	animation-timing-function: linear;
+}
+
+.daily-scroll {
+  display: table-row;
+}
+
+.daily-forecast {
+  display: table-cell;  
+  border-style: solid;
+  border-width: 5px;
+  border-color: #87ceeb;
+  padding: 10px; 
+  min-width: 350px; /* maximum width of three columns */
+  height: 150px;
   margin: 10px;
   /*box-shadow: 0px 0px 10px rgba(0,0,0,0.1);*/
   border-radius: 0px;
   background-color: #cccccc;
 }
-
-.col-l, .col-c, .col-r {
-	flex: 1 0 20%;
-	padding: 2.5%;
-	min-width: 250px;
-	max-width: 600px;
-	margin: 10px;
-	/*box-shadow: 0px 0px 10px rgba(0,0,0,0.1);*/
-	border-radius: 0px;
-	background-color: #cccccc;
-}
-
 
 a:link, a:visited {
   color: #000000;
@@ -118,7 +133,7 @@ nav ul li a:hover {
 .custom-list li:last-child {
 	border-bottom: none;
 }
-
+/*
 @media all and (max-width: 1024px) {
 	body {
 		font-size: 2em;
@@ -131,3 +146,4 @@ nav ul li a:hover {
 		max-width: 1000px;
 	}
 }
+*/
