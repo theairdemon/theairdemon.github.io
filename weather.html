@@ -41,8 +41,7 @@ Color dark: #101622
 	</div>
 	
 	<div class='weather-table'>
-	<div class='weather-col'>
-		<h1>TODO: Put weather table in here</h1>
+	<div class='weather-col' id='static-forecast'>
 	</div>
 	<div class='weather-col'>
 		<iframe width="560" height="315"
@@ -87,8 +86,15 @@ Color dark: #101622
 			dailyForecast += printDailyForecast(dailyJson.properties.periods[ii.toString()], ii.toString());
 		}
 		}
+
+		// shorter, static forecast loop
+		var staticForecast = "";
+		for (let ii = 0; ii < 8; ii++) {
+			staticForecast += printStaticForecast(dailyJson.properties.periods[ii.toString()], ii.toString());
+		}
 		
 		document.getElementById("daily").innerHTML = dailyForecast;
+		document.getElementById("static-forecast").innerHTML = staticForecast;
 	}
 
 	// Daily html format
@@ -97,6 +103,15 @@ Color dark: #101622
 			"<h3 class='period-name'>" + period.name + ": " + 
 			period.temperature + "&deg;F</h3>" + 
 			"<p>" + period.detailedForecast + "</p>" +
+			"</div>";
+	}
+	
+	// Static Forecast Format
+	function printStaticForecast(period, num) {
+		return "<div class='static-forecast-cell'>" +
+			"<div class='static-forecast-cell-unit'><h3 class='period-name'>" + period.name + ": " + 
+			+ period.temperature + "&deg;F</h3>" + "</div><div class='static-forecast-cell-unit'>" +
+			"<p>" + period.detailedForecast + "</p></div>" +
 			"</div>";
 	}
 	</script>
