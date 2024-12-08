@@ -31,7 +31,7 @@ body {
 	text-align: center;
 }
 
-.weather-gifs {
+.weather-table {
 	min-height: 1000px;
 	display: flex;
 	flex-flow: wrap;
@@ -44,13 +44,13 @@ body {
 .weather-col {	
 	flex: 1 0 100%;
 	padding: 2.5%;
-	min-width: 450px;
-	max-width: 1000px;
+	min-width: 250px;
+	max-width: 800px;
 	margin: 10px;
 }
 
 .weather-img {
-	height: 50%;
+	height: 40%;
 }
 
 @keyframes scrolling {
