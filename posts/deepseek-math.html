@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>DeepSeekMath Review</title>
+	<link rel="stylesheet" href="../style.css" charset="UTF-8">
+	<link rel="stylesheet" href="blog_style.css" charset="UTF-8">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P934Q7DDM0"></script>
+<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-P934Q7DDM0');
+</script>
+
+<body>
+	<header>
+		<h1>DeepSeekMath - A Review</h1>
+		<nav>
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../about.html">About</a></li>
+				<li><a href="../blog.html">Blog</a></li>
+				<li><a href="../projects.html">Projects</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="opening">
+		<p>Published on February 11th, 2025</p>
+	</div>
+
+	<!-- Introduction -->
+	<div class="headers">
+		<h2>Introduction</h2>
+	</div>
+	<div class="full-col">
+		<p>
+			This paper introduces DeepSeekMath 7B, a cutting‐edge language model dedicated to mathematical reasoning. 
+      The authors combine large-scale pre-training on 120B math-related tokens—sourced from Common Crawl—with innovative 
+      einforcement learning techniques to approach the performance levels of state-of-the-art closed models on benchmarks like GSM8K and MATH.
+		</p>
+<!-- 	</div>
+    
+	<div class="headers">
+		<h2>Math Pre-Training &amp; Corpus Construction</h2>
+	</div>
+	<div class="full-col"> -->
+		<p>
+			The authors detail an iterative data collection and decontamination pipeline that begins with a high-quality seed corpus (OpenWebMath). 
+      A fastText classifier, trained with 500,000 positive examples and an equal number of negatives, 
+      s employed to recall math-related pages from a deduplicated Common Crawl (reduced to 40B HTML pages). 
+      By iterating over data collection—with additional domain-based filtering and manual URL annotation—the corpus 
+      expands to 35.5 million pages (120B tokens), while stringent filtering safeguards against contaminating benchmark datasets.
+		</p>
+<!-- 	</div>
+
+	<div class="headers">
+		<h2>Validating the DeepSeekMath Corpus</h2>
+	</div>
+	<div class="full-col"> -->
+		<p>
+			Pre-training experiments using DeepSeek-LLM 1.3B across various mathematical corpora (such as MathPile, OpenWebMath, and Proof-Pile-2) 
+      revealed that the DeepSeekMath Corpus consistently led to higher accuracy. 
+      Its multilingual nature—emphasizing both English and Chinese content—underscores its robustness and highlights the potential of 
+      high-quality, large-scale web data for advancing mathematical reasoning.
+		</p>
+<!-- 	</div>
+
+	<div class="headers">
+		<h2>Training and Evaluating DeepSeekMath-Base 7B</h2>
+	</div>
+	<div class="full-col"> -->
+		<p>
+			Initialized from DeepSeek-Coder-Base-v1.5 7B, the authors train DeepSeekMath-Base 7B for 500B tokens with a 
+      meticulously balanced data mix: 56% math content, 20% GitHub code, 10% arXiv papers, 4% AlgebraicStack data, 
+      and 10% natural language from Common Crawl. 
+      This extensive training enables the model to excel at step-by-step problem solving, tool-assisted reasoning (via Python), 
+      and even formal theorem proving using Isabelle.
+		</p>
+	</div>
+
+	<!-- Supervised Fine-Tuning -->
+	<div class="headers">
+		<h2>Superview Fine-Tuning and Reinforcement Learning</h2>
+	</div>
+	<div class="full-col">
+		<p>
+			To further refine the model’s reasoning capabilities, the authors compiled a 776K-example instruction-tuning dataset 
+      covering diverse mathematical problems in both English and Chinese. Each problem is paired with solutions formatted 
+      as chain-of-thought, program-of-thought, or tool-integrated reasoning. 
+      This supervised fine-tuning process yields DeepSeekMath-Instruct 7B, which demonstrates notable improvements across a range of 
+      quantitative reasoning benchmarks.
+		</p>
+<!-- 	</div>
+
+	<div class="headers">
+		<h2>Reinforcement Learning with GRPO</h2>
+	</div>
+	<div class="full-col"> -->
+		<p>
+			The authors introduce Group Relative Policy Optimization (GRPO), an innovative reinforcement learning method that 
+      forgoes the need for a separate value network. By sampling multiple outputs per question and computing advantages 
+      based on group-relative reward normalization, GRPO efficiently reinforces beneficial reasoning steps while reducing 
+      computational overhead. This approach results in significant performance gains—evidenced by accuracies of 88.2% on 
+      GSM8K and 51.7% on MATH—surpassing many open-source models and even challenging certain closed-source systems.
+		</p>
+	</div>
+
+	<!-- Analysis and Insight -->
+	<div class="headers">
+		<h2>Analysis and Insight</h2>
+	</div>
+	<div class="full-col">
+		<p>
+			Beyond summarizing the paper’s technical contributions, several key insights emerge from the authors' work:
+		</p>
+		<ul>
+			<li>
+				<strong>Innovative Data Curation:</strong> The iterative pipeline for data collection and decontamination showcases that 
+        high-quality web data—when carefully filtered and augmented—can serve as a superior training source 
+        compared to traditional academic corpora, such as arXiv.
+			</li>
+			<li>
+				<strong>Synergy Between Code and Math Training:</strong> The results suggest that pre-training on 
+        code tokens significantly benefits subsequent mathematical reasoning. 
+        The two-stage training approach (or even one-stage mixed training) improves both standalone reasoning and tool-assisted 
+        problem solving, indicating a valuable interplay between diverse data modalities.
+			</li>
+			<li>
+				<strong>Efficient Reinforcement Learning:</strong> GRPO’s elimination of a separate value network and its use of 
+        group-relative advantage calculations represent a meaningful advance in reinforcement learning for language models. 
+        This method not only enhances performance but also reduces the computational burden typically associated with PPO.
+			</li>
+			<li>
+				<strong>Unified Training Paradigm:</strong> The authors propose a framework that integrates methods such as 
+        SFT, RFT, DPO, PPO, and GRPO under a common structure—focusing on data source, reward function, and gradient coefficients. 
+        This unified view provides a promising roadmap for further improvements in model alignment and robustness.
+			</li>
+			<li>
+				<strong>Limitations and Future Directions:</strong> Despite its impressive performance on quantitative reasoning benchmarks, 
+        DeepSeekMath still exhibits relative weaknesses in domains like geometry and formal theorem proving. 
+        These challenges hint at potential data selection biases and underline the need for more specialized fine-tuning in future research.
+			</li>
+		</ul>
+		<p>
+			Overall, the authors’ work not only pushes the boundaries of mathematical reasoning in open-source models but also lays a 
+      solid foundation for future explorations in data curation, multimodal training, and reinforcement learning strategies.
+		</p>
+	</div>
+
+	<!-- Conclusion -->
+	<div class="headers">
+		<h2>My Thoughts</h2>
+	</div>
+	<div class="full-col">
+		<p>
+      I'm excited for what the future holds for LLM and AI research. Like many folks in the tech space, I've been closely following and
+      doing my best to understand the latest revolution in AI technology with DeepSeek. In trying to understand what DeepSeek-R1 did to 
+      so vastly improve on other reasoning models, I came across DeepSeekMath, and now I feel more prepared to tackle big problems in 
+      the AI space.
+		</p>
+	</div>
+
+	<footer>
+		<p>Paper Source: <a href='https://arxiv.org/html/2402.03300v3#S4' target='_blank'>DeepSeekMath</a></p>
+	</footer>
+</body>
+
+</html>
