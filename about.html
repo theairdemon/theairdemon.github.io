@@ -1,184 +1,458 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <title>About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@heroicons/outline/24/outline.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <link rel="icon" type="image/x-icon" href="imgs/icons8-internet-16.png" />
+    <style>
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes hideBorder {
+        to {
+          border-right-width: 0;
+        }
+      }
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+      .typing::after {
+        content: '|';
+        display: inline-block;
+        animation: blink 0.8s step-end infinite;
+        opacity: 0;
+      }
+    </style>
+  </head>
 
-<head>
-	<title>About</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon" type="image/x-icon" href="imgs/icons8-internet-16.png">
-</head>
+  <body class="bg-[#1a1b26] text-[#a9b1d6] font-sans p-6 min-h-screen relative">
+    <div
+      id="particles-js"
+      class="absolute inset-0 z-0 pointer-events-none opacity-40"
+    ></div>
+    <header
+      class="text-center py-6 border-b border-opacity-50 border-[#7aa2f7] bg-gradient-to-b from-[#1a1b26] to-[#24283b] backdrop-blur-sm"
+    >
+      <h1
+        class="text-5xl font-bold text-[#7aa2f7] overflow-hidden whitespace-nowrap border-[#7aa2f7] typing mx-auto block text-center"
+        style="
+          animation: typing 3s steps(40, end), hideBorder 0.01s 1s forwards;
+          max-width: max-content;
+          border-right-width: 4px;
+        "
+      >
+        About Hunter
+      </h1>
+      <nav class="mt-8 pb-4">
+        <ul class="flex justify-center items-center gap-2 text-lg">
+          <li class="relative">
+            <a
+              href="index.html"
+              class="block px-4 py-2 text-[#7aa2f7] transition-all duration-300 ease-in-out group hover:text-[#bb9af7]"
+            >
+              <span
+                class="flex items-center gap-2 group-hover:-translate-y-0.5 transition-transform duration-300"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  ></path>
+                </svg>
+                Home
+              </span>
+              <span
+                class="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+              ></span>
+            </a>
+          </li>
+          <li class="relative">
+            <a
+              href="about.html"
+              class="block px-4 py-2 text-[#7aa2f7] transition-all duration-300 ease-in-out group hover:text-[#bb9af7]"
+            >
+              <span
+                class="flex items-center gap-2 group-hover:-translate-y-0.5 transition-transform duration-300"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  ></path>
+                </svg>
+                About
+              </span>
+              <span
+                class="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+              ></span>
+            </a>
+          </li>
+          <li class="relative">
+            <a
+              href="blog.html"
+              class="block px-4 py-2 text-[#7aa2f7] transition-all duration-300 ease-in-out group hover:text-[#bb9af7]"
+            >
+              <span
+                class="flex items-center gap-2 group-hover:-translate-y-0.5 transition-transform duration-300"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15M9 11l3 3m0 0l3-3m-3 3V8"
+                  ></path>
+                </svg>
+                Blog
+              </span>
+              <span
+                class="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+              ></span>
+            </a>
+          </li>
+          <li class="relative">
+            <a
+              href="projects.html"
+              class="block px-4 py-2 text-[#7aa2f7] transition-all duration-300 ease-in-out group hover:text-[#bb9af7]"
+            >
+              <span
+                class="flex items-center gap-2 group-hover:-translate-y-0.5 transition-transform duration-300"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                Projects
+              </span>
+              <span
+                class="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+              ></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P934Q7DDM0"></script>
-<script>
-	  window.dataLayer = window.dataLayer || [];
-	    function gtag(){dataLayer.push(arguments);}
-	    gtag('js', new Date());
+    <div class="flex justify-center items-center gap-6 py-4 bg-[#1a1b26]">
+      <a
+        href="https://www.linkedin.com/in/hunter-gallant"
+        target="_blank"
+        class="text-[#7aa2f7] hover:text-[#bb9af7] transition duration-300"
+        >LinkedIn</a
+      >
+      <a
+        href="https://github.com/theairdemon"
+        target="_blank"
+        class="text-[#7aa2f7] hover:text-[#bb9af7] transition duration-300"
+        >GitHub</a
+      >
+      <a
+        href="mailto:hgall7@gmail.com"
+        class="text-[#7aa2f7] hover:text-[#bb9af7] transition duration-300"
+        >Email</a
+      >
+      <p class="text-[#7aa2f7]">Arlington, VA</p>
+    </div>
 
-	    gtag('config', 'G-P934Q7DDM0');
-</script>
+    <div
+      class="headers text-center text-3xl font-bold py-12 text-transparent bg-clip-text bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7]"
+    >
+      Professional Summary
+    </div>
 
-<body>
-	<header>
-		<h1>About Hunter</h1>
-		<nav>
-		<ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="blog.html">Blog</a></li>
-		<li><a href="projects.html">Projects</a></li>
-		</ul>
-		</nav>
-	</header>
-	<div class="opening" style="padding-top: 0%; padding-bottom: 1%;">
-		<p>
-		<a href="https://www.linkedin.com/in/hunter-gallant" target="_blank">LinkedIn</a> | 
-		<a href="https://github.com/theairdemon" target="_blank">Github</a>
-		<br><br>
-		Arlington, VA | hgall7@gmail.com
-		</p>
-	</div>
-	<div class="headers">
-		<h2>Professional Summary</h2>
-	</div>
-	<div class="flex-grid">
-	<div class="full-col">
-		<ul class="custom-list">
-		<li>I am a software engineer with over 5 years of experience.</li>
-		<li>I specialize in developing large-scale, efficient software solutions across multiple platforms.</li>
-		<li>Over my career, I have worked in a wide array of programming languages, particularly TypeScript, C#, Java, SQL, and Python.</li>
-		<li>I have a strong background in data structures, Agile methodologies, databases, and localized generative AI.</li>
-		</ul>
-	</div>
-	</div>
-	<div class="headers">
-		<h2>Education</h2>
-	</div>
-	<div class="flex-grid">
-	<div class="col-l">
-		<p>
-		Master's of Science in Computer Science, <i>Dartmouth College</i>
-		</p>
-	</div>
-	<div class="col-r">
-		<p>
-		BA in Computer Science, <i>Dartmouth College</i>
-		</p>
-	</div>
-	</div>
-	<div class="headers">
-		<h2>Experience</h2>
-	</div>
-	<div class="flex-grid">
-	<div class="full-col">
-		<h3>Software Engineer @ <a href="https://range.com/" target="_blank">Range</a>, <i>2024-Present</i></h3>
-		<ul class="custom-list">
-			<li><b>Project - RangeGPT AI System:</b> Developed advanced tools for financial planners, including a chat
-				interface for high-level financial insights and context gathering.
-				<ul>
-				</ul>
-			</li>
-			<li><b>Project - Recharts Conversion:</b> Spearheaded the migration from Apex Charts to Recharts for financial
-				visualizations.
-				<ul>
-					<li><i>Confidence interval chart:</i> Designed a key financial projection chart, optimizing the
-						developer workflow for future conversions.</li>
-				</ul>
-			</li>
-			<li><b>Planning Engine Enhancements:</b> Implemented Secure Act 2.0 Catch-Up Limits for employer-sponsored
-				retirement plans.
-				<ul>
-				</ul>
-			</li>
-			<li><b>Advanced Fullstack Development:</b> Built and optimized features for member and CFP sites.
-				<ul>
-					<li><i>Assign member-specific tasks:</i> Completed fullstack implementation, including database schema
-						changes, GraphQL updates, and UI integration.</li>
-					<li><i>Enhanced navigation:</i> Fixed critical UI issues for better responsiveness across member and CFP
-						portals.</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-	<div class="full-col">
-		<h3>Full Stack Software Engineer @ <a href="https://alarm.com/" target="_blank">Alarm.com</a>, <i>2022-2024</i></h3>
-		<ul class="custom-list">
-		<li><b>Project - Cross-Dealer Groups:</b> Currently engineering a system for enterprise business groups that contain multiple security dealers.</li> 
-		<li><b>Project - Single System Logins:</b> Led the development of an enterprise-scale, highly performant logins management system project.</li>
-			<ul>
-			<li><i>Improved performance tenfold:</i> Reduced load time from 3-12 seconds down to an average of 0.3 seconds for over 1800 logins.</li>
-			<li><i>Modernized legacy code:</i> Built a fast, modern customer interface in Ember.js using Typescript and Handlebars.</li>
-			<li><i>Mobile-first development:</i> Developed mobile webviews in native mobile application, synchronizing with web application.</li>
-			</ul>
-		<li><b>Cross-Team Collaboration:</b> Coordinated with mobile developers to build synchronized web and mobile application pages, achieving a consistent user experience across all devices.</li>
-		<li><b>Feature Engineering:</b> Developed advanced product features focusing on user management, specifically tailored for enterprise clients.</li>
-		<li><b>Performance Tracking:</b> Monitored ticket metrics for performance and increase customer usage, leading to a 20% increase in user satisfaction as reported by security dealer feedback.</li>
-		<li><b>Beta Development:</b> Partnered with quality engineers and product managers to develop beta features, maintaining a patch rate of under 10%.</li>
-		</ul>
-	</div>
-	<div class="full-col">
-		<h3>Systems Engineer @ <a href="https://gdeb.com/" target="_blank">General Dynamics Electric Boat</a>, <i>2020-2021</i></h3>
-		<ul class="custom-list">
-		<li><b>Project - Monitoring Systems:</b> Designed and implemented confidential C and C++ systems monitoring and data management tools for submarines with an expected service life of 42 years.</li>
-		<li><b>Project - Automated Testing Software:</b> Developed Java-based virtual testing platforms and an automation tool, adopted by five additional developers, enhancing productivity by 20-25%.</li>
-		<li><b>Hardware Systems:</b> Built systems for long-term hardware deployment and monitoring, following government procedures and testing documentation.</li>
-		</ul>
-	</div>
-	<div class="full-col">
-		<h3>Software Engineer @ <a href="https://betterlifepartners.com/i" target="_blank">Better Life Partners</a>, <i>2019-2020</i></h3>
-		<ul class="custom-list">
-		<li><b>Project - PDMP Retrieval Automation:</b> Created an automated workflow using Python scripts to securely retrieve confidential patient data, achieving 100% automation of the task while maintaining all HIPAA procedures.</li>
-		<li><b>Feature Engineering:</b> Communicated directly with CTO and fellow team members to implement novel HIPAA-compliant features.</li>
-		</ul>
-	</div>
-	</div>
-	<div class="headers">
-		<h2>Key Skills</h2>
-	</div>
-	<div class="flex-grid">
-	<div class="col-l">
-		<h3>Languages</h3>
-		<ul>
-		<li>C</li>
-		<li>C#</li>
-		<li>C++</li>
-		<li>HTML and CSS</li>
-		<li>Java</li>
-		<li>JavaScript</li>
-		<li>TypeScript</li>
-		<li>Python</li>
-		<li>SQL</li>
-		<li>XAML</li>
-		</ul>
-	</div>
-	<div class="col-c">
-		<h3>Technologies</h3>
-		<ul>
-		<li>Ember.js</li>
-		<li>React</li>
-		<li>Angular</li>
-		<li>Git</li>
-		<li>Github</li>
-		<li>Kubernetes</li>
-		<li>Docker</li>
-		<li>REST APIs</li>
-		<li>MySQL</li>
-		<li>.NET Framework</li>	
-		<li>AWS</li>
-		<li>Jira</li>
-		<li>Linux</li>
-		</ul>
-	</div>
-	<div class="col-r">
-		<h3>Other</h3>
-		<ul>
-		<li>Agile software development</li>
-		<li>CI/CD</li>
-		<li>Data structures and algorithms</li>
-		<li>Test-driven development</li>
-		<li>Mobile app development</li>
-		</ul>
-	</div> 
-	</div>
-</body>
+    <div class="flex flex-col gap-8 px-4 max-w-7xl mx-auto">
+      <div class="p-6 bg-[#24283b]/80 backdrop-blur-sm rounded-lg shadow-lg">
+        <ul class="custom-list text-[#c0caf5]">
+          <li>I am a software engineer with over 5 years of experience.</li>
+          <li>
+            I specialize in developing large-scale, efficient software solutions
+            across multiple platforms.
+          </li>
+          <li>
+            Over my career, I have worked in a wide array of programming
+            languages, particularly TypeScript, C#, Java, SQL, and Python.
+          </li>
+          <li>
+            I have a strong background in data structures, Agile methodologies,
+            databases, and localized generative AI.
+          </li>
+        </ul>
+      </div>
+    </div>
 
+    <div
+      class="headers text-center text-3xl font-bold py-12 text-transparent bg-clip-text bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7]"
+    >
+      Education
+    </div>
+
+    <div
+      class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-4 max-w-7xl mx-auto"
+    >
+      <div
+        class="p-6 bg-[#24283b]/80 backdrop-blur-sm rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-2xl hover:shadow-[#7aa2f7]/10 hover:bg-[#24283b] group"
+      >
+        <h3 class="text-xl font-semibold mb-6 text-[#c0caf5]">
+          <a
+            class="text-[#c0caf5] transition-colors duration-300 ease-in-out hover:text-[#7aa2f7] underline decoration-[#7aa2f7]/30 hover:decoration-[#7aa2f7] underline-offset-4"
+            href="https://dartmouth.edu/"
+            target="_blank"
+            >Master's of Science in Computer Science, Dartmouth College</a
+          >
+        </h3>
+      </div>
+      <div
+        class="p-6 bg-[#24283b]/80 backdrop-blur-sm rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-2xl hover:shadow-[#7aa2f7]/10 hover:bg-[#24283b] group"
+      >
+        <h3 class="text-xl font-semibold mb-6 text-[#c0caf5]">
+          <a
+            class="text-[#c0caf5] transition-colors duration-300 ease-in-out hover:text-[#7aa2f7] underline decoration-[#7aa2f7]/30 hover:decoration-[#7aa2f7] underline-offset-4"
+            href="https://dartmouth.edu/"
+            target="_blank"
+            >BA in Computer Science, Dartmouth College</a
+          >
+        </h3>
+      </div>
+    </div>
+
+    <div
+      class="headers text-center text-3xl font-bold py-12 text-transparent bg-clip-text bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7]"
+    >
+      Experience
+    </div>
+
+    <div class="flex flex-col gap-8 px-4 max-w-7xl mx-auto">
+      <div class="p-6 bg-[#24283b]/80 backdrop-blur-sm rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-6 text-[#c0caf5]">
+          Software Engineer @
+          <a href="https://range.com/" target="_blank">Range</a>,
+          <i>2024-Present</i>
+        </h3>
+        <ul class="custom-list text-[#c0caf5]">
+          <li>
+            <b>Project - RangeGPT AI System:</b> Developed advanced tools for
+            financial planners, including a chat interface for high-level
+            financial insights and context gathering.
+            <ul></ul>
+          </li>
+          <li>
+            <b>Project - Recharts Conversion:</b> Spearheaded the migration from
+            Apex Charts to Recharts for financial visualizations.
+            <ul>
+              <li>
+                <i>Confidence interval chart:</i> Designed a key financial
+                projection chart, optimizing the developer workflow for future
+                conversions.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Planning Engine Enhancements:</b> Implemented Secure Act 2.0
+            Catch-Up Limits for employer-sponsored retirement plans.
+            <ul></ul>
+          </li>
+          <li>
+            <b>Advanced Fullstack Development:</b> Built and optimized features
+            for member and CFP sites.
+            <ul>
+              <li>
+                <i>Assign member-specific tasks:</i> Completed fullstack
+                implementation, including database schema changes, GraphQL
+                updates, and UI integration.
+              </li>
+              <li>
+                <i>Enhanced navigation:</i> Fixed critical UI issues for better
+                responsiveness across member and CFP portals.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="p-6 bg-[#24283b]/80 backdrop-blur-sm rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-6 text-[#c0caf5]">
+          Full Stack Software Engineer @
+          <a href="https://alarm.com/" target="_blank">Alarm.com</a>,
+          <i>2022-2024</i>
+        </h3>
+        <ul class="custom-list text-[#c0caf5]">
+          <li>
+            <b>Project - Cross-Dealer Groups:</b> Currently engineering a system
+            for enterprise business groups that contain multiple security
+            dealers.
+          </li>
+          <li>
+            <b>Project - Single System Logins:</b> Led the development of an
+            enterprise-scale, highly performant logins management system
+            project.
+          </li>
+          <ul>
+            <li>
+              <i>Improved performance tenfold:</i> Reduced load time from 3-12
+              seconds down to an average of 0.3 seconds for over 1800 logins.
+            </li>
+            <li>
+              <i>Modernized legacy code:</i> Built a fast, modern customer
+              interface in Ember.js using Typescript and Handlebars.
+            </li>
+            <li>
+              <i>Mobile-first development:</i> Developed mobile webviews in
+              native mobile application, synchronizing with web application.
+            </li>
+          </ul>
+          <li>
+            <b>Cross-Team Collaboration:</b> Coordinated with mobile developers
+            to build synchronized web and mobile application pages, achieving a
+            consistent user experience across all devices.
+          </li>
+          <li>
+            <b>Feature Engineering:</b> Developed advanced product features
+            focusing on user management, specifically tailored for enterprise
+            clients.
+          </li>
+          <li>
+            <b>Performance Tracking:</b> Monitored ticket metrics for
+            performance and increase customer usage, leading to a 20% increase
+            in user satisfaction as reported by security dealer feedback.
+          </li>
+          <li>
+            <b>Beta Development:</b> Partnered with quality engineers and
+            product managers to develop beta features, maintaining a patch rate
+            of under 10%.
+          </li>
+        </ul>
+      </div>
+      <div class="p-6 bg-[#24283b]/80 backdrop-blur-sm rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-6 text-[#c0caf5]">
+          Systems Engineer @
+          <a href="https://gdeb.com/" target="_blank"
+            >General Dynamics Electric Boat</a
+          >, <i>2020-2021</i>
+        </h3>
+        <ul class="custom-list text-[#c0caf5]">
+          <li>
+            <b>Project - Monitoring Systems:</b> Designed and implemented
+            confidential C and C++ systems monitoring and data management tools
+            for submarines with an expected service life of 42 years.
+          </li>
+          <li>
+            <b>Project - Automated Testing Software:</b> Developed Java-based
+            virtual testing platforms and an automation tool, adopted by five
+            additional developers, enhancing productivity by 20-25%.
+          </li>
+          <li>
+            <b>Hardware Systems:</b> Built systems for long-term hardware
+            deployment and monitoring, following government procedures and
+            testing documentation.
+          </li>
+        </ul>
+      </div>
+      <div class="p-6 bg-[#24283b]/80 backdrop-blur-sm rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-6 text-[#c0caf5]">
+          Software Engineer @
+          <a href="https://betterlifepartners.com/i" target="_blank"
+            >Better Life Partners</a
+          >, <i>2019-2020</i>
+        </h3>
+        <ul class="custom-list text-[#c0caf5]">
+          <li>
+            <b>Project - PDMP Retrieval Automation:</b> Created an automated
+            workflow using Python scripts to securely retrieve confidential
+            patient data, achieving 100% automation of the task while
+            maintaining all HIPAA procedures.
+          </li>
+          <li>
+            <b>Feature Engineering:</b> Communicated directly with CTO and
+            fellow team members to implement novel HIPAA-compliant features.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 30, density: { enable: true, value_area: 800 } },
+          color: { value: ['#7aa2f7', '#bb9af7', '#2ac3de'] },
+          shape: { type: 'circle' },
+          opacity: {
+            value: 0.2,
+            random: true,
+            animation: {
+              enable: true,
+              speed: 0.5,
+              minimumValue: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 3,
+            random: true,
+            animation: {
+              enable: true,
+              speed: 2,
+              minimumValue: 0.5,
+              sync: false,
+            },
+          },
+          move: {
+            enable: true,
+            speed: 0.8,
+            direction: 'none',
+            random: true,
+            straight: false,
+            outModes: { default: 'out' },
+            attract: { enable: true, rotateX: 600, rotateY: 1200 },
+          },
+        },
+        interactivity: {
+          detectsOn: 'canvas',
+          events: {
+            onHover: { enable: true, mode: 'bubble' },
+            resize: true,
+          },
+          modes: {
+            bubble: { distance: 200, size: 6, duration: 0.4, opacity: 0.4 },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+  </body>
 </html>
