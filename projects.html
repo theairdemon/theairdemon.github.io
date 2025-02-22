@@ -1,112 +1,245 @@
 <!DOCTYPE html>
-<html>
-<!--
-Color Palette:
-Background: #F6E4CD
-Main text: #101622
-Links (visited and unvisited the same): #2F4858
-Links (hover): #92A895
-Links (click): #C3C6AC
--->
-<head>
-	<title>Projects</title>
-	<link rel="stylesheet" href="style.css" charset="UTF-8">
-	<link rel="icon" type="image/x-icon" href="imgs/icons8-internet-16.png">
-</head>
+<html lang="en">
+  <head>
+    <title>Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="imgs/icons8-internet-16.png" />
+    <style>
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+      @keyframes hideBorder {
+        to { border-right-width: 0; }
+      }
+      @keyframes blink {
+        50% { border-color: transparent; }
+      }
+      .typing::after {
+        content: '|';
+        display: inline-block;
+        animation: blink 0.8s step-end infinite;
+        opacity: 0;
+      }
+    </style>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P934Q7DDM0"></script>
-<script>
-	  window.dataLayer = window.dataLayer || [];
-	    function gtag(){dataLayer.push(arguments);}
-	    gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-P934Q7DDM0"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-	    gtag('config', 'G-P934Q7DDM0');
-</script>
+    gtag('config', 'G-P934Q7DDM0');
+  </script>
 
-<body>
-	<header>
-		<h1>Hunter Gallant</h1>	
-		<nav>
-		<ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="blog.html">Blog</a></li>
-		<li><a href="projects.html">Projects</a></li>
-		</ul>
-		</nav>
-	</header>
-	<div class="opening">
-		<p>
-		A selection of interactable projects on my website. Enjoy!
-		</p>
-	</div>
-		
-	<div class="flex-grid">
-	<div class="col-l">
-		<h3 class="project-title">Published Music</h3>
-		<label for="platforms">Select music platform: </label>
-		<select name="platforms" id="platforms">
-		<option value="amazon">Amazon</option>
-		<option value="apple">Apple Music</option>
-		<option value="spotify">Spotify</option>
-		<option value="youtube">Youtube Music</option>
-		</select>
-		<p style="font-size:2.5em;" id="results"></p>
-	</div>
-	<div class="col-c">
-		<h3 class="project-title"><a href="ads.html">Google Ads</a></h3>
-		<p>
-		An experiment with Google Adsense on this site.
-		</p>
-	</div>
-	<div class="col-l">
-		<h3 class="project-title"><a href="weather.html">The Weather</a></h3>
-		<p>
-		WORK IN PROGRESS: Will eventually become a chill music and weather channel page.
-		</p>
-	</div>
-	</div>
-	<script>
-	// Update music-link with information from dropdown
-	var x = setInterval(function() {
-		// Get our variable
-		var website = document.getElementById("platforms").value;
+  <body class="bg-[#1a1b26] text-[#a9b1d6] font-sans p-6 min-h-screen selection:bg-[#7aa2f7] selection:text-[#1a1b26] relative">
+    <div id="particles-js" class="absolute inset-0 z-0 pointer-events-none opacity-40"></div>
+    <div class="relative z-10">
+      <header class="text-center py-6 border-b border-opacity-50 border-[#7aa2f7] bg-gradient-to-b from-[#1a1b26] to-[#24283b] backdrop-blur-sm">
+        <h1
+          class="text-5xl font-bold text-[#7aa2f7] overflow-hidden whitespace-nowrap border-[#7aa2f7] typing mx-auto block text-center"
+          style="
+            animation: typing 3s steps(40, end), hideBorder 0.01s 1s forwards;
+            max-width: max-content;
+            border-right-width: 4px;
+          "
+        >
+          Hunter's Projects
+        </h1>
+        <nav class="mt-8 pb-4">
+          <ul class="flex justify-center items-center gap-2 text-lg">
+            <li class="relative">
+              <a href="index.html" 
+                 class="block px-4 py-2 text-[#7aa2f7] transition-all duration-300 ease-in-out group hover:text-[#bb9af7]">
+                <span class="flex items-center gap-2 group-hover:-translate-y-0.5 transition-transform duration-300">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                  </svg>
+                  Home
+                </span>
+                <span class="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              </a>
+            </li>
+            <li class="relative">
+              <a href="about.html" 
+                 class="block px-4 py-2 text-[#7aa2f7] transition-all duration-300 ease-in-out group hover:text-[#bb9af7]">
+                <span class="flex items-center gap-2 group-hover:-translate-y-0.5 transition-transform duration-300">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                  </svg>
+                  About
+                </span>
+                <span class="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              </a>
+            </li>
+            <li class="relative">
+              <a href="blog.html" 
+                 class="block px-4 py-2 text-[#7aa2f7] transition-all duration-300 ease-in-out group hover:text-[#bb9af7]">
+                <span class="flex items-center gap-2 group-hover:-translate-y-0.5 transition-transform duration-300">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15M9 11l3 3m0 0l3-3m-3 3V8"></path>
+                  </svg>
+                  Blog
+                </span>
+                <span class="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              </a>
+            </li>
+            <li class="relative">
+              <a href="projects.html" 
+                 class="block px-4 py-2 text-[#7aa2f7] transition-all duration-300 ease-in-out group hover:text-[#bb9af7]">
+                <span class="flex items-center gap-2 group-hover:-translate-y-0.5 transition-transform duration-300">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                  </svg>
+                  Projects
+                </span>
+                <span class="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-		var img = "";
-		var url = "";
-		var name = "";
+      <div class="text-center text-3xl font-bold py-12 text-transparent bg-clip-text bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7]">
+        Interactive Projects
+      </div>
 
-		if (website == "amazon") {
-			img = "imgs/amazon.png";
-			url = "https://music.amazon.com/artists/B091ZHS6DZ/hunter-gallant";
-			name = "Amazon";
-		} else if (website == "apple") {
-			img = "imgs/applemusic.webp";
-			url = "https://music.apple.com/us/artist/hunter-gallant/1561978682";
-			name = "Apple Music";
-		} else if (website == "spotify")  {
-			img = "imgs/spotify.webp";
-			url = "https://open.spotify.com/artist/4Z5HvtCKPOMbXsNzqdaF7w";
-			name = "Spotify";
-		} else if (website == "youtube") {
-			img = "imgs/youtubemusic.webp";
-			url = "https://music.youtube.com/@huntergallant8054";
-			name = "Youtube Music";
-		}
+      <p class="text-center text-[#a9b1d6] mb-12 max-w-2xl mx-auto">
+        A selection of interactable projects on my website. Enjoy!
+      </p>
 
-		// Display selected result
-		document.getElementById("results").innerHTML = "<img src="
-			+ img 
-			+ " height='40px' width='40px'/> "
-			+ "<a href='"
-			+ url
-			+ "' target='_blank'>"
-			+ name
-			+ "</a>";
-	}, 500);
-	</script>
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 max-w-7xl mx-auto">
+        <div class="p-6 bg-[#24283b]/80 backdrop-blur-sm rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-2xl hover:shadow-[#7aa2f7]/10 hover:bg-[#24283b] group">
+          <h3 class="text-xl font-semibold mb-6 text-[#c0caf5]">Published Music</h3>
+          <div class="mb-6">
+            <label for="platforms" class="block text-[#a9b1d6] mb-2">Select music platform: </label>
+            <select name="platforms" id="platforms" class="w-full bg-[#1a1b26] text-[#a9b1d6] border border-[#7aa2f7] rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#7aa2f7] focus:border-transparent">
+              <option value="amazon">Amazon</option>
+              <option value="apple">Apple Music</option>
+              <option value="spotify">Spotify</option>
+              <option value="youtube">Youtube Music</option>
+            </select>
+          </div>
+          <p id="results" class="text-4xl text-[#7aa2f7] text-center transition-all duration-300"></p>
+        </div>
 
-</body>
+        <div class="p-6 bg-[#24283b]/80 backdrop-blur-sm rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-2xl hover:shadow-[#7aa2f7]/10 hover:bg-[#24283b] group">
+          <h3 class="text-xl font-semibold mb-6 text-[#c0caf5]">
+            <a href="ads.html" class="text-[#c0caf5] transition-colors duration-300 ease-in-out hover:text-[#7aa2f7] underline decoration-[#7aa2f7]/30 hover:decoration-[#7aa2f7] underline-offset-4">
+              Google Ads
+            </a>
+          </h3>
+          <p class="text-[#a9b1d6] mb-4 leading-relaxed">
+            An experiment with Google Adsense on this site.
+          </p>
+          <a href="ads.html" class="inline-flex items-center text-[#7aa2f7] transition-all duration-300 ease-in-out hover:text-[#bb9af7] group-hover:translate-x-1">
+            View Project
+            <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
 
+        <div class="p-6 bg-[#24283b]/80 backdrop-blur-sm rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-2xl hover:shadow-[#7aa2f7]/10 hover:bg-[#24283b] group">
+          <h3 class="text-xl font-semibold mb-6 text-[#c0caf5]">
+            <a href="weather.html" class="text-[#c0caf5] transition-colors duration-300 ease-in-out hover:text-[#7aa2f7] underline decoration-[#7aa2f7]/30 hover:decoration-[#7aa2f7] underline-offset-4">
+              The Weather
+            </a>
+          </h3>
+          <p class="text-[#a9b1d6] mb-4 leading-relaxed">
+            WORK IN PROGRESS: Will eventually become a chill music and weather channel page.
+          </p>
+          <a href="weather.html" class="inline-flex items-center text-[#7aa2f7] transition-all duration-300 ease-in-out hover:text-[#bb9af7] group-hover:translate-x-1">
+            View Project
+            <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 30, density: { enable: true, value_area: 800 } },
+          color: { value: ['#7aa2f7', '#bb9af7', '#2ac3de'] },
+          shape: { type: 'circle' },
+          opacity: {
+            value: 0.2,
+            random: true,
+            animation: { enable: true, speed: 0.5, minimumValue: 0.1, sync: false }
+          },
+          size: {
+            value: 3,
+            random: true,
+            animation: { enable: true, speed: 2, minimumValue: 0.5, sync: false }
+          },
+          move: {
+            enable: true,
+            speed: 0.8,
+            direction: 'none',
+            random: true,
+            straight: false,
+            outModes: { default: 'out' },
+            attract: { enable: true, rotateX: 600, rotateY: 1200 }
+          }
+        },
+        interactivity: {
+          detectsOn: 'canvas',
+          events: {
+            onHover: { enable: true, mode: 'bubble' },
+            resize: true
+          },
+          modes: {
+            bubble: { distance: 200, size: 6, duration: 0.4, opacity: 0.4 }
+          }
+        },
+        retina_detect: true
+      });
+
+      // Update music-link with information from dropdown
+      var x = setInterval(function () {
+        var website = document.getElementById('platforms').value;
+        var img = '';
+        var url = '';
+        var name = '';
+
+        if (website == 'amazon') {
+          img = 'imgs/amazon.png';
+          url = 'https://music.amazon.com/artists/B091ZHS6DZ/hunter-gallant';
+          name = 'Amazon';
+        } else if (website == 'apple') {
+          img = 'imgs/applemusic.webp';
+          url = 'https://music.apple.com/us/artist/hunter-gallant/1561978682';
+          name = 'Apple Music';
+        } else if (website == 'spotify') {
+          img = 'imgs/spotify.webp';
+          url = 'https://open.spotify.com/artist/4Z5HvtCKPOMbXsNzqdaF7w';
+          name = 'Spotify';
+        } else if (website == 'youtube') {
+          img = 'imgs/youtubemusic.webp';
+          url = 'https://music.youtube.com/@huntergallant8054';
+          name = 'Youtube Music';
+        }
+
+        // Display selected result
+        document.getElementById('results').innerHTML =
+          '<img src=' +
+          img +
+          " height='40px' width='40px'/> " +
+          "<a href='" +
+          url +
+          "' target='_blank'>" +
+          name +
+          '</a>';
+      }, 500);
+    </script>
+  </body>
 </html>
