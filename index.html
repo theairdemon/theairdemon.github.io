@@ -1,86 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<!--
+Color Palette:
+Background: #F6E4CD
+Main text: #101622
+Links (visited and unvisited the same): #2F4858
+Links (hover): #92A895
+Links (click): #C3C6AC
+-->
 <head>
-    <title>Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
-        .typing {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 4px solid #8fbcbb;
-            animation: typing 3s steps(40, end) forwards, blink 0.8s step-end infinite;
-        }
-        .typing.done {
-            border-right: none;
-        }
-    </style>
+	<title>Home</title>
+	<link rel="stylesheet" href="style.css" charset="UTF-8">
+	<link rel="icon" type="image/x-icon" href="imgs/icons8-internet-16.png">
 </head>
-<body class="bg-[#2e3440] text-[#eceff4] font-sans p-6">
-    <header class="text-center py-6 border-b border-[#8fbcbb]">
-        <h1 id="typing-text" class="text-5xl font-bold text-[#8fbcbb] typing">Hunter Gallant</h1>    
-        <nav class="mt-4">
-            <ul class="flex justify-center space-x-6 text-lg">
-                <li><a href="index.html" class="text-[#8fbcbb] hover:text-[#88c0d0] underline">Home</a></li>
-                <li><a href="about.html" class="text-[#8fbcbb] hover:text-[#88c0d0] underline">About</a></li>
-                <li><a href="blog.html" class="text-[#8fbcbb] hover:text-[#88c0d0] underline">Blog</a></li>
-                <li><a href="projects.html" class="text-[#8fbcbb] hover:text-[#88c0d0] underline">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="text-center py-6">
-        <p class="text-lg">
-            Welcome to my website! I see you're joining from <span id="ip">somewhere in the US</span>. Here is a selection of my personal projects, and if you feel so inclined, you can check out the code for these on <a href="https://github.com/theairdemon" target="_blank" class="text-[#88c0d0] hover:text-[#a3be8c] underline">my Github</a>.
-        </p>
-    </div>
-    
-    <div class="text-center text-3xl font-bold py-6 text-[#8fbcbb]">Published Works</div>  
-    
-    <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8 px-4">
-        <div class="p-6 bg-[#3b4252] rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-2xl">
-            <h3 class="text-xl font-semibold mb-6 text-[#eceff4]"><a href="https://digitalcommons.dartmouth.edu/masters_theses/115/" target="_blank" class="text-[#eceff4] hover:text-[#a3be8c] underline">Underwater Robot Path Planning</a></h3>
-            <p class="mt-2 text-sm text-[#eceff4]">
-                <b>Abstract:</b> Sunflower, a novel cross-medium localization system between an aerial drone and an underwater robot, has not yet been implemented in a multi-robot exploration system. This project’s aim was to simulate various configurations of multi-robot systems, and to create an algorithm, called AdjustPath, to improve exploration and avoid inter-robot collisions.
-            </p>
-        </div>
-        <div class="p-6 bg-[#3b4252] rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-2xl">
-            <h3 class="text-xl font-semibold mb-6 text-[#eceff4]"><a href="https://dl.acm.org/doi/abs/10.1145/3498361.3539773" target="_blank" class="text-[#eceff4] hover:text-[#a3be8c] underline">Sunflower: locating underwater robots</a></h3>
-            <p class="mt-2 text-sm text-[#eceff4]">
-                <b>Abstract:</b> Sunflower presents the first demonstration of wireless, 3D localization across the air-water interface, eliminating the need for additional infrastructure on the water surface.
-            </p>
-        </div>
-    </div>
-    
-    <div class="text-center text-3xl font-bold py-6 text-[#8fbcbb]">Personal Projects</div>
-    
-    <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-8 px-4">
-        <div class="p-6 bg-[#3b4252] rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-2xl">
-            <h3 class="text-xl font-semibold mb-6 text-[#eceff4]"><a href="https://github.com/theairdemon/musicGenerator" target="_blank" class="text-[#eceff4] hover:text-[#a3be8c] underline">Music Generator</a></h3>
-            <p class="mt-2 text-sm text-[#eceff4]">Using music theory and random number generators, I built a Python program that creates MIDI files (digital music instructions).</p>
-        </div>
-        <div class="p-6 bg-[#3b4252] rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-2xl">
-            <h3 class="text-xl font-semibold mb-6 text-[#eceff4]"><a href="https://github.com/theairdemon/CellularAutomata" target="_blank" class="text-[#eceff4] hover:text-[#a3be8c] underline">Cellular Automata</a></h3>
-            <p class="mt-2 text-sm text-[#eceff4]">A simulation of Conway's Game of Life, using SFML to render simple 2D graphics.</p>
-        </div>
-        <div class="p-6 bg-[#3b4252] rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-2xl">
-            <h3 class="text-xl font-semibold mb-6 text-[#eceff4]"><a href="https://github.com/theairdemon/themedPoemGenerator" target="_blank" class="text-[#eceff4] hover:text-[#a3be8c] underline">Poem Generator</a></h3>
-            <p class="mt-2 text-sm text-[#eceff4]">An Android app that generates themed poetry and haikus using common poetic nouns, verbs, and adjectives.</p>
-        </div>
-    </div>
 
-    <script>
-        setTimeout(() => {
-            document.getElementById("typing-text").classList.add("done");
-        }, 3000);
-    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P934Q7DDM0"></script>
+<script>
+	  window.dataLayer = window.dataLayer || [];
+	    function gtag(){dataLayer.push(arguments);}
+	    gtag('js', new Date());
+
+	    gtag('config', 'G-P934Q7DDM0');
+</script>
+
+<body>
+	<header>
+		<h1>Hunter Gallant</h1>	
+		<nav>
+		<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="blog.html">Blog</a></li>
+		<li><a href="projects.html">Projects</a></li>
+		</ul>
+		</nav>
+	</header>
+	<div class="opening">
+		<p>
+		Welcome to my website! I see you're joining from <span id="ip">somewhere in the US</span>. Here is a selection of my personal projects, and if you feel so inclined, you can checkout the code for these on <a href="https://github.com/theairdemon" target="_blank">my Github</a>.
+		</p>
+	</div>
+	
+	
+	<div class="headers">
+		<h2>Published Works</h2>
+	</div>	
+	
+	<div class="flex-grid">
+	<div class="col-l">
+		<h3 class="project-title"><a href="https://digitalcommons.dartmouth.edu/masters_theses/115/" target="_blank">Underwater Robot Path Planning in an Intermittent Communication System
+</a></h3>
+		<p>
+		<b>Abstract:</b> Sunflower, a novel cross-medium localization system between an aerial drone and an underwater robot, has not yet been implemented in a multi-robot exploration system. This project’s aim was to simulate various configurations of multi-robot systems, and to create an algorithm, called AdjustPath, to improve exploration and avoid inter- robot collisions. With three, five, seven, and ten simulated underwater robots, there was significant improvement when the AdjustPath algorithm was used. Knowing this, future hardware using the Sunflower system could use this proposed algorithm to increase efficiency and avoid more collisions.
+		</p>
+	</div>
+	<div class="col-r">
+		<h3 class="project-title"><a href="https://dl.acm.org/doi/abs/10.1145/3498361.3539773" target="_blank">Sunflower: locating underwater robots from the air</a></h3>
+		<p>
+		<b>Abstract:</b> Locating underwater robots is fundamental for enabling important underwater applications. The current mainstream method requires a physical infrastructure with relays on the water surface, which is largely ad-hoc, introduces a significant logistical overhead, and entails limited scalability. Our work, Sunflower, presents the first demonstration of wireless, 3D localization across the air-water interface - eliminating the need for additional infrastructure on the water surface. Specifically, we propose a laser-based sensing system to enable aerial drones to directly locate underwater robots. The Sunflower system consists of a queen and a worker component on a drone and each tracked underwater robot, respectively.
+		</p>
+	</div>
+	</div>
+	
+	
+	<div class="headers">
+		<h2>Personal Projects</h2>
+	</div>
+	
+	<div class="flex-grid">
+	<div class="col-l">
+		<h3 class="project-title"><a href="https://github.com/theairdemon/musicGenerator" target="_blank">Music Generator</a></h3>
+		<p>
+		Using music theory and random number generators, I built a python program that creates MIDI files (digital music instructions). A musician can simply click-and-drag the files into a DAW (digital audio workstation), and they'd immediately have a full song, comprised of chords, melodies, and harmonies.
+		</p>
+	  </div>
+	  <div class="col-c">
+		<h3 class="project-title"><a href="https://github.com/theairdemon/CellularAutomata" target="_blank">Cellular Automata</a></h3>
+		<p>
+		As an experiment in artificial life, and to improve my C++ skills, I built a simulation of <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Conway's Game of Life</a>, using SFML to render the simple 2D graphics. Using those cells as a foundation, I then built what I call the "least-optimized Tetris game ever". Instead of blocks that fall from the top of the screen to the bottom, this version of Tetris implements a custom variation of Conway's Game of Life rules, and can take the user's input to modify the state of the game.
+		</p>
+	  </div>
+	  <div class="col-r">
+		<h3 class="project-title"><a href="https://github.com/theairdemon/themedPoemGenerator" target="_blank">Poem Generator</a></h3>
+		<p>
+		My first major undertaking, and one that I am still proud of; I built and published an Android app, <a href="https://play.google.com/store/apps/details?id=com.mycompany.poetry" target="_blank">PoemGen</a>. Similar to the Music Generator, this application uses common poetic nouns, verbs, and adjectives to randomly generate poetry on-demand. It can also generate haiku, using a more limited list of words (to account for syllables).
+		</p>
+	  </div>
+	</div>	
+	<script type="application/javascript">
+	function getIP(json) {
+		document.getElementById("ip").innerHTML = json.city + ", " + json.region;
+	}
+	</script>
+	<script type="application/javascript" src="https://ipinfo.io/?format=jsonp&callback=getIP"></script>
+
 </body>
-</html>
 
+</html>
