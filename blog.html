@@ -1,293 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <meta charset="utf-8">
     <title>Blog</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <link rel="icon" type="image/x-icon" href="imgs/favicon-32x32.png" />
-    <style>
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-        to {
-          width: 100%;
-        }
-      }
-      @keyframes hideBorder {
-        to {
-          border-right-width: 0;
-        }
-      }
-      @keyframes blink {
-        50% {
-          border-color: transparent;
-        }
-      }
-      .typing::after {
-        content: '|';
-        display: inline-block;
-        animation: blink 0.8s step-end infinite;
-        opacity: 0;
-      }
-    </style>
-  </head>
+    <link rel="icon" type="image/x-icon" href="imgs/favicon-32x32.png">
+</head>
 
-  <body class="bg-[#1a1b26] text-[#a9b1d6] font-sans p-6 min-h-screen relative">
-    <div
-      id="particles-js"
-      class="absolute inset-0 z-[-1] pointer-events-none opacity-40"
-    ></div>
-    <header
-      class="text-center py-6 border-b border-opacity-50 border-[#7aa2f7] bg-gradient-to-b from-[#1a1b26] to-[#24283b] backdrop-blur-sm"
-    >
-      <h1
-        class="text-5xl font-bold text-[#7aa2f7] overflow-hidden whitespace-nowrap border-[#7aa2f7] typing mx-auto block text-center"
-        style="
-          animation: typing 3s steps(40, end), hideBorder 0.01s 1s forwards;
-          max-width: max-content;
-          border-right-width: 4px;
-        "
-      >
-        Hunter's Blog
-      </h1>
-      <nav class="mt-8 pb-4">
-        <ul class="flex justify-center items-center gap-2 text-lg">
-          <li class="relative">
-            <a
-              href="index.html"
-              class="block px-4 py-2 text-[#7aa2f7] transition-all duration-300 ease-in-out group hover:text-[#bb9af7]"
-            >
-              <span
-                class="flex items-center gap-2 group-hover:-translate-y-0.5 transition-transform duration-300"
-              >
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  />
-                </svg>
-                Home
-              </span>
-              <span
-                class="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
-              ></span>
-            </a>
-          </li>
-          <li class="relative">
-            <a
-              href="about.html"
-              class="block px-4 py-2 text-[#7aa2f7] transition-all duration-300 ease-in-out group hover:text-[#bb9af7]"
-            >
-              <span
-                class="flex items-center gap-2 group-hover:-translate-y-0.5 transition-transform duration-300"
-              >
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  />
-                </svg>
-                About
-              </span>
-              <span
-                class="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
-              ></span>
-            </a>
-          </li>
-          <li class="relative">
-            <a
-              href="blog.html"
-              class="block px-4 py-2 text-[#7aa2f7] transition-all duration-300 ease-in-out group hover:text-[#bb9af7]"
-            >
-              <span
-                class="flex items-center gap-2 group-hover:-translate-y-0.5 transition-transform duration-300"
-              >
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15M9 11l3 3m0 0l3-3m-3 3V8"
-                  />
-                </svg>
-                Blog
-              </span>
-              <span
-                class="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
-              ></span>
-            </a>
-          </li>
-          <li class="relative">
-            <a
-              href="projects.html"
-              class="block px-4 py-2 text-[#7aa2f7] transition-all duration-300 ease-in-out group hover:text-[#bb9af7]"
-            >
-              <span
-                class="flex items-center gap-2 group-hover:-translate-y-0.5 transition-transform duration-300"
-              >
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                Projects
-              </span>
-              <span
-                class="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#7aa2f7] to-[#bb9af7] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
-              ></span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<body bgcolor="#C0C0C0" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+    <table width="760" align="center" cellpadding="6" cellspacing="0" border="0">
+        <!-- Banner / Title -->
+        <tr>
+            <td bgcolor="#FFFFFF" align="center">
+                <h1>Hunter's Blog</h1>
+            </td>
+        </tr>
 
-    <div class="flex flex-col gap-8 px-4 max-w-7xl mx-auto mt-10">
-      <div class="bg-[#24283b] rounded-lg shadow-lg p-6 mb-6">
-        <h2 class="text-3xl font-bold text-[#c0caf5] mb-2">
-          Welcome to My Blog!
-        </h2>
-        <p class="text-[#a9b1d6]">
-          Here you'll find posts about my latest projects, thoughts on software
-          development, and more.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div
-          class="bg-[#24283b] rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105"
-        >
-          <h3 class="text-xl font-semibold text-[#c0caf5] mb-2">
-            <a href="posts/deepseek-math.html" class="hover:text-[#7aa2f7]"
-              >DeepSeekMath - A Review</a
-            >
-          </h3>
-          <p class="text-[#a9b1d6] mb-4">
-            A literature review of the paper "DeepSeekMath: Pushing the Limits
-            of Mathematical Reasoning in Computer Science".
-          </p>
-          <a
-            href="posts/deepseek-math.html"
-            class="text-[#7aa2f7] hover:text-[#bb9af7]"
-            >Read More</a
-          >
-        </div>
-        <div
-          class="bg-[#24283b] rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105"
-        >
-          <h3 class="text-xl font-semibold text-[#c0caf5] mb-2">
-            <a
-              href="posts/vertical-collection-1.html"
-              class="hover:text-[#7aa2f7]"
-              >Vertical Collection: Ember.js and Lazy Loading</a
-            >
-          </h3>
-          <p class="text-[#a9b1d6] mb-4">
-            Third party addons are great for reducing duplicated code, and they
-            can streamline the development process.
-          </p>
-          <a
-            href="posts/vertical-collection-1.html"
-            class="text-[#7aa2f7] hover:text-[#bb9af7]"
-            >Read More</a
-          >
-        </div>
-        <div
-          class="bg-[#24283b] rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105"
-        >
-          <h3 class="text-xl font-semibold text-[#c0caf5] mb-2">
-            <a href="posts/performance-1.html" class="hover:text-[#7aa2f7]"
-              >Refactoring for Efficiency: Tackling Performance Issues in
-              Data-Heavy Pages</a
-            >
-          </h3>
-          <p class="text-[#a9b1d6] mb-4">
-            Refactoring code can drastically improve performance. In this case,
-            refactoring reduced page load time.
-          </p>
-          <a
-            href="posts/performance-1.html"
-            class="text-[#7aa2f7] hover:text-[#bb9af7]"
-            >Read More</a
-          >
-        </div>
-      </div>
-    </div>
+        <!-- Nav -->
+        <tr>
+            <td bgcolor="#FFFFFF" align="center">
+                <b>
+                    <a href="index.html">Home</a> |
+                    <a href="about.html">About</a> |
+                    <a href="blog.html">Blog</a> |
+                    <a href="projects.html">Projects</a>
+                </b>
+            </td>
+        </tr>
 
-    <script>
-      particlesJS('particles-js', {
-        particles: {
-          number: { value: 30, density: { enable: true, value_area: 800 } },
-          color: { value: ['#7aa2f7', '#bb9af7', '#2ac3de'] },
-          shape: { type: 'circle' },
-          opacity: {
-            value: 0.2,
-            random: true,
-            animation: {
-              enable: true,
-              speed: 0.5,
-              minimumValue: 0.1,
-              sync: false,
-            },
-          },
-          size: {
-            value: 3,
-            random: true,
-            animation: {
-              enable: true,
-              speed: 2,
-              minimumValue: 0.5,
-              sync: false,
-            },
-          },
-          move: {
-            enable: true,
-            speed: 0.8,
-            direction: 'none',
-            random: true,
-            straight: false,
-            outModes: { default: 'out' },
-            attract: { enable: true, rotateX: 600, rotateY: 1200 },
-          },
-        },
-        interactivity: {
-          detectsOn: 'canvas',
-          events: {
-            onHover: { enable: true, mode: 'bubble' },
-            resize: true,
-          },
-          modes: {
-            bubble: { distance: 200, size: 6, duration: 0.4, opacity: 0.4 },
-          },
-        },
-        retina_detect: true,
-      });
-    </script>
-  </body>
+        <tr>
+            <td>
+                <hr size="1" noshade>
+            </td>
+        </tr>
+
+        <!-- Intro -->
+        <tr>
+            <td bgcolor="#FFFFFF">
+                <h2 align="center">Welcome to My Blog!</h2>
+                <p>Here you'll find posts about my latest projects, thoughts on software development, and more.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <hr size="1" noshade>
+            </td>
+        </tr>
+
+        <!-- Posts -->
+        <tr>
+            <td bgcolor="#FFFFFF">
+                <h3><a href="posts/deepseek-math.html">DeepSeekMath - A Review</a></h3>
+                <p>A literature review of the paper "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in
+                    Computer Science".</p>
+                <p><a href="posts/deepseek-math.html">Read More</a></p>
+
+                <hr size="1" noshade>
+
+                <h3><a href="posts/vertical-collection-1.html">Vertical Collection: Ember.js and Lazy Loading</a></h3>
+                <p>Third party addons are great for reducing duplicated code, and they can streamline the development
+                    process.</p>
+                <p><a href="posts/vertical-collection-1.html">Read More</a></p>
+
+                <hr size="1" noshade>
+
+                <h3><a href="posts/performance-1.html">Refactoring for Efficiency: Tackling Performance Issues in
+                        Data-Heavy Pages</a></h3>
+                <p>Refactoring code can drastically improve performance. In this case, refactoring reduced page load
+                    time.</p>
+                <p><a href="posts/performance-1.html">Read More</a></p>
+            </td>
+        </tr>
+    </table>
+</body>
+
 </html>
